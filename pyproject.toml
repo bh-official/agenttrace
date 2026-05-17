@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agenttrace"
+version = "1.0.0"
+description = "EU AI Act Article 12 compliant audit trails for AI agents. Hash-chained, tamper-evident decision logs for LangGraph, OpenAI Agents SDK, Claude Code, and MCP. Zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Linda Oraegbunam" }]
+keywords = [
+    "eu-ai-act", "audit-trail", "ai-governance", "llm-agents",
+    "compliance", "agentic-ai", "langgraph", "openai-agents",
+    "claude-code", "mcp", "iso-42001", "nist-ai-rmf",
+    "tamper-evident", "hash-chain", "article-12",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.4.0",
+]
+
+[project.scripts]
+agenttrace = "agenttrace.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/obielin/agenttrace"
+"Bug Tracker" = "https://github.com/obielin/agenttrace/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
