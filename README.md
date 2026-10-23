@@ -1,9 +1,8 @@
 # agenttrace
 
-**EU AI Act Article 12 compliant audit trails for AI agents. Hash-chained, tamper-evident decision logs for LangGraph, OpenAI Agents SDK, Claude Code, and MCP. Zero dependencies.**
+**Audit trails for AI agents, built to support EU AI Act Article 12 record-keeping. Hash-chained, tamper-evident decision logs for LangGraph, OpenAI Agents SDK, Claude Code, and MCP. Zero dependencies.**
 
 [![Tests](https://img.shields.io/badge/Tests-41%20passing-brightgreen?style=flat-square)](tests/)
-[![PyPI](https://img.shields.io/pypi/v/agenttrace?style=flat-square)](https://pypi.org/project/agenttrace/)
 [![Dependencies](https://img.shields.io/badge/Dependencies-zero-brightgreen?style=flat-square)](pyproject.toml)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)](pyproject.toml)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
@@ -36,8 +35,10 @@ agenttrace wraps your agent code and emits **tamper-evident, hash-chained JSONL 
 ## Install
 
 ```bash
-pip install agenttrace
+pip install git+https://github.com/obielin/agenttrace.git
 ```
+
+agenttrace is not on PyPI yet. The PyPI name agenttrace belongs to a different project.
 
 Zero dependencies. Pure Python 3.10+.
 
@@ -251,9 +252,7 @@ print(report.to_dict())      # Machine-readable JSON
 
 ---
 
-## PhD and research context
-
-agenttrace was developed as part of PhD research on **agentic AI governance** at Leeds Beckett University (supervisor: Dr Sandra Obiora). The schema design draws on:
+## Standards referenced
 
 - EU AI Act (Regulation (EU) 2024/1689), Articles 12, 13, 14
 - ISO/IEC 42001:2023 AI Management Systems
@@ -261,26 +260,6 @@ agenttrace was developed as part of PhD research on **agentic AI governance** at
 - OWASP Agentic AI Top 10 (2026)
 
 The schema is designed as a citable artefact for the research community. If you build on this schema, please cite the GitHub repository.
-
----
-
-## GitHub repository setup
-
-**Repository name:** `agenttrace`
-**Description:** `EU AI Act Article 12 compliant audit trails for AI agents. Hash-chained tamper-evident decision logs. Zero dependencies.`
-**Topics:** `eu-ai-act` `audit-trail` `ai-governance` `llm-agents` `compliance` `agentic-ai` `langgraph` `openai-agents` `claude-code` `mcp` `iso-42001` `nist-ai-rmf` `tamper-evident` `hash-chain`
-
-**PyPI setup:**
-- Package name: `agenttrace`
-- CLI command: `agenttrace`
-- PyPI Trusted Publisher: repo `agenttrace`, workflow `publish.yml`, env `pypi`
-
-**Push commands:**
-```bash
-git init && git add . && git commit -m "Initial release: agenttrace v1.0.0"
-git remote add origin https://github.com/obielin/agenttrace.git
-git branch -M main && git push -u origin main
-```
 
 ---
 
