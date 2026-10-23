@@ -184,5 +184,5 @@ GitHub. https://github.com/obielin/agenttrace
 
 ---
 
-*Schema maintained by Linda Oraegbunam, PhD Researcher, Leeds Beckett University.*
+*Schema maintained by Linda Oraegbunam.*
 *Research focus: Agentic AI Governance.*
